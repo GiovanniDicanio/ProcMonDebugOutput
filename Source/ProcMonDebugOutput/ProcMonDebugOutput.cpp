@@ -20,7 +20,7 @@ namespace {
         {
             // I'm attempting the open every time because the user could start 
             // Process Monitor after their process.
-            g_hDevice = ::CreateFile(L"\\\\.\\Global\\ProcmonDebugLogger",
+            g_hDevice = ::CreateFile(LR"(\\.\Global\ProcmonDebugLogger)",
                                      GENERIC_WRITE,
                                      FILE_SHARE_WRITE,
                                      nullptr,
